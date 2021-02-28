@@ -5,7 +5,7 @@ import TrendMovies from '../components/trendmovies'
 export default function Home() {
   return (
     <div className="container">
-      <TrendMovies/>
+      <TrendMovies />
       <img style={{ width : '70px'}} src="https://raw.githubusercontent.com/eraygundogmus/netflix-clone/main/assets/logo.png"/>
       <h1> Who is watching? </h1>
       <Link href="/homepage">
