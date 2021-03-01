@@ -28,7 +28,7 @@ function Rows( {title, url} ) {
         <div className="row__container">
             <h2> {title} </h2>
             {request.map((card) => (
-                <div className="row__container__card">
+                <div key={card.id} className="row__container__card">
                 <div>{card.name ? card.name : card.title}</div>
                 <img src={`${img_url}${card.poster_path}`}/>
                 </div>

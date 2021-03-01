@@ -1,11 +1,11 @@
 import Rows from '../components/Rows';
 import requests from '../components/requests';
-import Navigation from '../components/navigation';
+import Header from '../components/Header';
 
 function Movies() {
     return (
         <div className="homepage-app">
-            <Navigation />
+            <Header />
             <Rows title="Horrors" url={requests.fetchHorrorMovies}/> 
         </div>
     )
