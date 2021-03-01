@@ -1,0 +1,19 @@
+.posters {
+  object-fit: contain;
+  max-height: 400px;
+  margin-right: 10px;
+}
+
+.row {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.row_dgfdg {
+  display: flex;
+}
