@@ -15,7 +15,6 @@ function Rows( {title, url} ) {
         }
         
         fetchRowItems();
-        console.log(request)
     },[url])
 
 // To show features, i need to add an onHover effect for every item which will change item's css to display features.
