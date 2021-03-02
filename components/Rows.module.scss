@@ -1,19 +1,43 @@
-.posters {
-  object-fit: contain;
-  max-height: 400px;
-  margin-right: 10px;
+.container {
 }
-
 .row {
+  display: flex;
   overflow-x: scroll;
-  overflow-y: hidden;
-  display: flex;
+  overflow-y: scroll;
+  overscroll-behavior: none;
 }
-
-.row::-webkit-scrollbar {
-  display: none;
-}
-
-.row_dgfdg {
-  display: flex;
+.parent {
+  position: relative;
+  margin-right: 10px;
+  padding-right: 210px;
+  padding-bottom: 300px;
+  .card {
+    position: absolute;
+    color: grey;
+    padding: 10px;
+    &:hover {
+      transform: scale(1.4);
+      z-index: 9;
+      position: absolute;
+    }
+  }
+  .posters {
+    max-width: 200px;
+  }
+  .features {
+    background-color: black;
+    padding-bottom: 10px;
+    max-width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 3;
+    background-color: black;
+  }
+  .buttons {
+    padding: 10px;
+  }
+  .name {
+  }
+  .overview {
+  }
 }

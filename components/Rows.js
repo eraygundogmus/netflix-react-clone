@@ -10,16 +10,21 @@ import ThumbDownAltRoundedIcon from '@material-ui/icons/ThumbDownAltRounded';
 import KeyboardArrowDownOutlinedIcon from '@material-ui/icons/KeyboardArrowDownOutlined';
 import styles from './Rows.module.scss'
 
+
 const img_url = "https://image.tmdb.org/t/p/w500/"
+const strShorter = function truncate(short, n){
+    return short?.length > n ? short.substr(0, n-1) + "..." : short;}
 
 function Rows( {title, url, rowName} ) {
     const [request, setRequest] = useState([]);
-    const infoRef = useRef(null)
-    const [features, setFeatures ] = useState({            
-        border: '1px solid black',
-        width: '264px',
+     const [features, setFeatures ] = useState({            
         textAlign: 'center',
-        display: 'none'
+/*         visibility: 'hidden', */
+/*         zIndex: '-1', */
+/*         backgroundColor: 'grey',
+        display: 'flex',
+        width: '300px' */
+/*         position: 'absolute' */
     })
 
     useEffect(() => {
@@ -40,37 +45,53 @@ function Rows( {title, url, rowName} ) {
 
 
     function hoverHandler(e) {
-        document.getElementsByClassName(`${e.target.nextSibling.className}`)[0].style.display = 'unset'
-        
+          setTimeout(() => {
+/*             document.getElementsByClassName(`${e.target.nextSibling.className}`)[0].style.visibility = 'visible'
+             document.getElementsByClassName(`${e.target.nextSibling.className}`)[0].style.top = '0' 
+            e.target.style.position = 'absolute'
+           e.target.style.maxHeight = '500px' */
+          }, 500)
+          
+//        document.getElementsByClassName(`${e.target.nextSibling.className}`)[0].style.position = 'absolute'
+         
     }
 
     function hoverLeaveHandler(e) {
-        document.getElementsByClassName(`${e.target.nextSibling.className}`)[0].style.display = 'none'
+         setTimeout(() => {          
+/*              document.getElementsByClassName(`${e.target.nextSibling.className}`)[0].style.visibility = 'hidden'
+              e.target.style.position = 'unset'
+             e.target.style.maxHeight = '300px'  */}, 500)
+
+
     }
 
+    
 
     return (
         <div className={`${rowName}_container`}>
             <h2> {title} </h2>
-                <div className={styles.row}> 
-                    {request.map((card) => (
-                        <div key={card.id} className={styles.card}>
-                            <img onMouseEnter={hoverHandler} onMouseLeave={hoverLeaveHandler} className={styles.posters} src={`${img_url}${card.poster_path}`}/>
-                            <div className={card.id} style={features} ref={infoRef}>
-                                    <div className={styles.buttons}>
-                                        <PlayCircleFilledOutlinedIcon fontSize="large"/>
-                                        <AddCircleOutlineOutlinedIcon fontSize="large" />
-                                        <ThumbUpAltOutlinedIcon fontSize="large" />
-                                        <ThumbDownAltOutlinedIcon fontSize="large" />
-                                        <KeyboardArrowDownOutlinedIcon fontSize="large" />
-                                    </div>
-                                    <div className={styles.name}>{card.name ? card.name : card.title}</div>
-                                    <p className={styles.overview}> {card.overview} </p>
-                            </div>
-                        </div>
-                    ))}
+                <div className={styles.container}>
+                        <div className={styles.row}> 
+                            {request.map((card) => (
+                            <div className={styles.parent}> 
+                                <div key={card.id} className={styles.card}>
+                                    <img onMouseEnter={hoverHandler} onMouseLeave={hoverLeaveHandler} className={styles.posters} src={`${img_url}${card.poster_path}`}/>
+                                        <div className={styles.features} style={features} >
+                                                <div className={styles.buttons}>
+                                                    <PlayCircleFilledOutlinedIcon fontSize="large"/>
+                                                    <AddCircleOutlineOutlinedIcon fontSize="large" />
+                                                    <ThumbUpAltOutlinedIcon fontSize="large" />
+                                                    <ThumbDownAltOutlinedIcon fontSize="large" />
+                                                    <KeyboardArrowDownOutlinedIcon fontSize="large" />
+                                                </div>
+                                                <div className={styles.name}>{card.name ? card.name : card.title}</div>
+                                                <p className={styles.overview}> {strShorter(card.overview, 120)} </p>
+                                        </div>
+                                </div>
+                            </div>   
+                                ))}
+                        </div> 
                 </div>
-            
         </div>
     )
 }
