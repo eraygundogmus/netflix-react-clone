@@ -1,23 +1,24 @@
 .container {
 }
+
 .row {
   display: flex;
   overflow-x: scroll;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overscroll-behavior: none;
+  z-index: 1;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .parent {
-  position: relative;
-  margin-right: 10px;
-  padding-right: 210px;
-  padding-bottom: 300px;
   .card {
-    position: absolute;
+    position: relative;
     color: grey;
-    padding: 10px;
+    margin-right: 20px;
     &:hover {
-      transform: scale(1.4);
-      z-index: 9;
+      transform: scale(1.3);
+      z-index: 9999;
       position: absolute;
     }
   }
@@ -34,7 +35,6 @@
     background-color: black;
   }
   .buttons {
-    padding: 10px;
   }
   .name {
   }
