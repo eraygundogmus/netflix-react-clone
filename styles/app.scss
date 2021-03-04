@@ -1,4 +1,11 @@
 body {
   margin: 0;
   background-color: grey;
+  width: 100%;
+}
+
+.all_rows {
+  margin-top: -270px;
+  z-index: 1;
+  position: relative;
 }

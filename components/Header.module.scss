@@ -10,16 +10,19 @@
   background-color: black;
   color: white;
   .left {
+    margin-left: 50px;
     display: flex;
     .logo {
-      max-width: 90px;
+      max-width: 110px;
     }
   }
   .right {
+    margin-right: 50px;
     display: flex;
 
     .search {
-      width: 40px;
+      width: 20px;
+      margin-right: 30px;
     }
     .avatar {
     }

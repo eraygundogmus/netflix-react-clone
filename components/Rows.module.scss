@@ -1,14 +1,18 @@
 .container {
   position: relative;
+  width: 100%;
 }
-
+.row_title {
+  margin-left: 50px;
+  color: white;
+}
 .row {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
-  overflow-y: hidden;
-  width: 100%;
-  margin-left: 30px;
+  overflow-y: scroll;
+
+  margin-left: 50px;
   overscroll-behavior: none;
   &::-webkit-scrollbar {
     display: none;

@@ -131,10 +131,10 @@ const ListItem = ({ style }) => {
 
     return (
         <div className={`${rowName}_container`}>
-            <h2> {title} </h2>
+            <h2 className={styles.row_title}> {title} </h2>
                 <div className={styles.container}>
                         <div id="myRow" className={styles.row}> 
-                            {request.slice(0,9).map((card) => (
+                            {request.slice(0,20).map((card) => (
                             <div className={styles.parent}> 
                                 <div id="card" key={card.id} className={styles.card}>
                                     <img className={styles.posters} src={`${img_url}${card.poster_path}`}/>
