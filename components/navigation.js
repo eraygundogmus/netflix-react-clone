@@ -1,13 +1,14 @@
 import Link from 'next/link';
+import styles from './Navigation.module.scss'
 
 function Navigation() {
     return (
-        <nav>
+        <nav className={styles.header_navbar}>
             <Link href="/homepage">
-                <a>Homepage</a>
+                <a className={styles.navbar_link}>Homepage</a>
             </Link>
             <Link href="/movies">
-                <a>Movies</a>
+                <a className={styles.navbar_link}>Movies</a>
             </Link>
         </nav>
     )

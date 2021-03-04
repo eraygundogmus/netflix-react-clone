@@ -1,0 +1,27 @@
+.header {
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: black;
+  color: white;
+  .left {
+    display: flex;
+    .logo {
+      max-width: 90px;
+    }
+  }
+  .right {
+    display: flex;
+
+    .search {
+      width: 40px;
+    }
+    .avatar {
+    }
+  }
+}

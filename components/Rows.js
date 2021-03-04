@@ -36,15 +36,86 @@ function Rows( {title, url, rowName} ) {
 //        console.log(request)
     },[url])
 
-
-    function hoverHandler(e) {
+/* 
+     function hoverHandler(e) {
           setTimeout(() => {
-            const sth = null
 
-          
-//        document.getElementsByClassName(`${e.target.nextSibling.className}`)[0].style.position = 'absolute'
+
+
+            
+
+            !!!! BRO STAY SOLID !!!!
+            !!!! TRY CSS.TEXT DOM MANUPILATION ON CARDS 
+            !!! CSSSTYLEDECLARATION SETPROPERTY()
+
+            CHECK THIS OUT TOO 
+
+
+            var Link = React.createClass({
+  getInitialState: function(){
+    return {hover: false}
+  },
+  toggleHover: function(){
+    this.setState({hover: !this.state.hover})
+  },
+  render: function() {
+    var linkStyle;
+    if (this.state.hover) {
+      linkStyle = {backgroundColor: 'red'}
+    } else {
+      linkStyle = {backgroundColor: 'blue'}
+    }
+    return(
+      <div>
+        <a style={linkStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>Link</a>
+      </div>
+    )
+}
+
+
+    AND THISSS
+
+    const useFade = () => {
+  const [ fade, setFade ] = useState(false);
+
+  const onMouseEnter = () => {
+    setFade(true);
+  };
+
+  const onMouseLeave = () => {
+    setFade(false);
+  };
+
+  const fadeStyle = !fade ? {
+    opacity: 1, transition: 'all .2s ease-in-out',
+  } : {
+    opacity: .5, transition: 'all .2s ease-in-out',
+  };
+
+  return { fadeStyle, onMouseEnter, onMouseLeave };
+};
+
+const ListItem = ({ style }) => {
+  const { fadeStyle, ...fadeProps } = useFade();
+
+  return (
+    <Paper
+      style={{...fadeStyle, ...style}}
+      {...fadeProps}
+    >
+      {...}
+    </Paper>
+  );
+};
+
+
+
+    CHECK OUT FOR CSS MODULES
+
+
+
          
-    }, 500)}
+    }, 500)}  */
 
 /*     function hoverLeaveHandler(e) {
          setTimeout(() => {
@@ -62,10 +133,10 @@ function Rows( {title, url, rowName} ) {
         <div className={`${rowName}_container`}>
             <h2> {title} </h2>
                 <div className={styles.container}>
-                        <div className={styles.row}> 
-                            {request.map((card) => (
+                        <div id="myRow" className={styles.row}> 
+                            {request.slice(0,9).map((card) => (
                             <div className={styles.parent}> 
-                                <div onMouseEnter={hoverHandler}  id="card" key={card.id} className={styles.card}>
+                                <div id="card" key={card.id} className={styles.card}>
                                     <img className={styles.posters} src={`${img_url}${card.poster_path}`}/>
                                         <div className={styles.features} >
                                                 <div className={styles.buttons}>
