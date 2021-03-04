@@ -19,13 +19,6 @@ const strShorter = function truncate(short, n){
 
 function Rows( {title, url, rowName} ) {
     const [request, setRequest] = useState([]);
-     const [features, setFeatures ] = useState({ 
-        transform: 'scale(1.3)',
-        zIndex: '9999',
-        position: 'absolute'
-
-    })
-
     useEffect(() => {
         async function fetchRowItems() {
             const req = await axios.get(url);

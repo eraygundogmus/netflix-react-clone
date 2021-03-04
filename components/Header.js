@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from './navigation';
 import styles from './Header.module.scss'
 
 
 
 function Header() {
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                document.getElementById("header").classList.add('header_background')
+                
+            } else document.getElementById("header").classList.remove('header_background')
+        });
+        return () => {
+            window.removeEventListener('scroll', () => {
+                if (window.scrollY < 100) {
+                    document.getElementById("header").classList.remove('header_background')
+                } else document.getElementById("header").classList.add('header_background')
+            });
+        };
+    }, []);
+
+
     return (
-        <div className={styles.header}>
+        <div id="header"className={styles.header}>
             <div className={styles.left}> 
             <img className={styles.logo} src="https://raw.githubusercontent.com/eraygundogmus/netflix-clone/main/assets/logo.png"/>
             <Navigation />

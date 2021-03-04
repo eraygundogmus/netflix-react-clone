@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: grey;
+  background-color: rgb(20, 20, 20);
   width: 100%;
 }
 
@@ -8,4 +8,12 @@ body {
   margin-top: -270px;
   z-index: 1;
   position: relative;
+}
+
+.header_background {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.97) 30%,
+    rgba(6, 6, 6, 0.9) 100%
+  ) !important;
 }

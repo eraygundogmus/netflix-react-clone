@@ -27,11 +27,11 @@ function Bilboard( { url} ) {
                         <div key={item.id} className={styles.bilboard_card}>
                             <div className={styles.category}> 
                             <img className={styles.icon} src="https://github.com/eraygundogmus/netflix-react-clone/blob/main/components/assets/netflix.png?raw=true"/>
-                            <h4>M O V I E</h4>
+                            <h4>S E R I E S</h4>
                             </div>
-                            <div>{item.name ? item.name : item.title}</div>
-                            <button> Play </button>
-                            <button> More </button>
+                            <div className={styles.movie_name}>{item.name ? item.name : item.title}</div>
+                            <button className={styles.button_1}> Play </button>
+                            <button className={styles.button_2}> More information</button>
                         </div>
                 </div>
             ))}

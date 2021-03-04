@@ -1,13 +1,19 @@
 .header {
-  width: 70px;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   position: fixed;
   z-index: 1000;
   width: 100%;
-  background-color: black;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(20, 20, 20, 0.9) 85%
+  );
   color: white;
   .left {
     margin-left: 50px;

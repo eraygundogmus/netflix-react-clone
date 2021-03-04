@@ -5,13 +5,30 @@
     display: flex;
     top: 0;
     min-width: 100%;
+    mask-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(20, 20, 20, 0.9) 85%
+    );
+    -webkit-mask-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0) 10%,
+      rgba(20, 20, 20, 0.9) 55%
+    );
   }
   .bilboard_card {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50px;
     z-index: 99999;
     color: white;
+    .movie_name {
+      padding-bottom: 20px;
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
     .category {
       display: flex;
       align-items: center;
@@ -22,8 +39,17 @@
     }
     button {
       height: 60px;
-      width: 120px;
+
       margin-right: 10px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      font-weight: normal;
+      background-color: rgba(51, 51, 51, 0.5);
+      padding: 0.5rem 2rem 0.5rem 2rem;
+      color: white;
+      font-size: 1vw;
+      border-radius: 0.2vw;
     }
   }
 }
