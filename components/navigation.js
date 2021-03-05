@@ -7,6 +7,9 @@ function Navigation() {
             <Link href="/homepage">
                 <a className={styles.navbar_link}>Homepage</a>
             </Link>
+            <Link href="/tvshows">
+                <a className={styles.navbar_link}>TV Shows</a>
+            </Link>
             <Link href="/movies">
                 <a className={styles.navbar_link}>Movies</a>
             </Link>

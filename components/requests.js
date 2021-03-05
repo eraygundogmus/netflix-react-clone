@@ -9,7 +9,16 @@ const requests = {
   fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=35`,
   fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
   fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
-  fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
+  fetchFamilyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10751`,
+  fetchDramaMovies: `/discover/movie?api_key=${API_KEY}&with_genres=18`,
+  fetchMusicMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10402`,
+  fetchTVAction: `/discover/tv?api_key=${API_KEY}&with_genres=10759`,
+  fetchTVAnimation: `/discover/tv?api_key=${API_KEY}&with_genres=16`,
+  fetchTvComedy: `/discover/tv?api_key=${API_KEY}&with_genres=35`,
+  fetchTvDrama: `/discover/tv?api_key=${API_KEY}&with_genres=18`,
+  fetchTvFamily: `/discover/tv?api_key=${API_KEY}&with_genres=10751`,
+  fetchTvReality: `/discover/tv?api_key=${API_KEY}&with_genres=10764`,
+  fetchTvTalk: `/discover/tv?api_key=${API_KEY}&with_genres=10767`
 };
 
 export default requests;

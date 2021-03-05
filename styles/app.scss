@@ -22,6 +22,9 @@ body {
     margin-top: 40px;
     display: flex;
     justify-content: center;
+    .avatar {
+      max-width: 240px;
+    }
   }
   .username {
     color: grey;
