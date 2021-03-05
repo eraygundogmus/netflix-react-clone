@@ -4,7 +4,32 @@ body {
   width: 100%;
   font-family: system-ui;
 }
-
+.index_container {
+  width: 100%;
+  .index__logo {
+    width: 110px;
+    margin-left: 2.5%;
+  }
+  h1 {
+    display: flex;
+    margin-top: 3%;
+    justify-content: center;
+    color: white;
+    font-weight: 400;
+    font-size: 48px;
+  }
+  .img_container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  .username {
+    color: grey;
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+  }
+}
 .all_rows {
   margin-top: -270px;
   z-index: 1;
