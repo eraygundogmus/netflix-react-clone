@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+  .footer_container {
+    max-width: 980px;
+  }
+  .footer_medias {
+    display: flex;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    img {
+      max-width: 25px;
+      margin-left: 10px;
+    }
+  }
+  .footer_nav {
+    margin-bottom: 50px;
+    li {
+      text-decoration: none;
+      color: white;
+      padding: 0 4% 2% 0;
+      display: inline-flex;
+      min-width: 160px;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}

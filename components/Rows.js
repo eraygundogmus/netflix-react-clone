@@ -15,8 +15,6 @@ const img_url = "https://image.tmdb.org/t/p/w500/"
 const strShorter = function truncate(short, n){
     return short?.length > n ? short.substr(0, n-1) + "..." : short;}
 
-
-
 function Rows( {title, url, rowName} ) {
     const [request, setRequest] = useState([]);
     useEffect(() => {
@@ -29,98 +27,6 @@ function Rows( {title, url, rowName} ) {
 //        console.log(request)
     },[url])
 
-/* 
-     function hoverHandler(e) {
-          setTimeout(() => {
-
-
-
-            
-
-            !!!! BRO STAY SOLID !!!!
-            !!!! TRY CSS.TEXT DOM MANUPILATION ON CARDS 
-            !!! CSSSTYLEDECLARATION SETPROPERTY()
-
-            CHECK THIS OUT TOO 
-
-
-            var Link = React.createClass({
-  getInitialState: function(){
-    return {hover: false}
-  },
-  toggleHover: function(){
-    this.setState({hover: !this.state.hover})
-  },
-  render: function() {
-    var linkStyle;
-    if (this.state.hover) {
-      linkStyle = {backgroundColor: 'red'}
-    } else {
-      linkStyle = {backgroundColor: 'blue'}
-    }
-    return(
-      <div>
-        <a style={linkStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>Link</a>
-      </div>
-    )
-}
-
-
-    AND THISSS
-
-    const useFade = () => {
-  const [ fade, setFade ] = useState(false);
-
-  const onMouseEnter = () => {
-    setFade(true);
-  };
-
-  const onMouseLeave = () => {
-    setFade(false);
-  };
-
-  const fadeStyle = !fade ? {
-    opacity: 1, transition: 'all .2s ease-in-out',
-  } : {
-    opacity: .5, transition: 'all .2s ease-in-out',
-  };
-
-  return { fadeStyle, onMouseEnter, onMouseLeave };
-};
-
-const ListItem = ({ style }) => {
-  const { fadeStyle, ...fadeProps } = useFade();
-
-  return (
-    <Paper
-      style={{...fadeStyle, ...style}}
-      {...fadeProps}
-    >
-      {...}
-    </Paper>
-  );
-};
-
-
-
-    CHECK OUT FOR CSS MODULES
-
-
-
-         
-    }, 500)}  */
-
-/*     function hoverLeaveHandler(e) {
-         setTimeout(() => {
-
-              document.getElementsByClassName(`${e.target.nextSibling.className}`)[0].style.visibility = 'hidden'
-              e.target.style.position = 'unset'
-             e.target.style.maxHeight = '300px' , 500)
-
-
-    } */
-    
-// style={features}
 
     return (
         <div className={`${rowName}_container`}>

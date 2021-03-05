@@ -5,7 +5,7 @@ import styles from './Bilboard.module.scss'
 
 const img_url = "https://image.tmdb.org/t/p/w1280"
 
-function Bilboard( { url} ) {
+function Bilboard( { url, type} ) {
     const [bilboard, setBilboard] = useState([]);
 
     useEffect(() => {
@@ -27,7 +27,7 @@ function Bilboard( { url} ) {
                         <div key={item.id} className={styles.bilboard_card}>
                             <div className={styles.category}> 
                             <img className={styles.icon} src="https://github.com/eraygundogmus/netflix-react-clone/blob/main/components/assets/netflix.png?raw=true"/>
-                            <h4>S E R I E S</h4>
+                            <h4>{type}</h4>
                             </div>
                             <div className={styles.movie_name}>{item.name ? item.name : item.title}</div>
                             <button className={styles.button_1}> Play </button>
