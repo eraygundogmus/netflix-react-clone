@@ -15,84 +15,84 @@ function Footer() {
                     <li href="#">
                         <a>
                             <span>
-                            Seslendirme
+                            Audio and Subtitles
                             </span>
                         </a>
                     </li>
                     <li href="#">
                         <a>
                             <span>
-                            Sesli Betimleme
+                            Audio Description
                             </span>
                         </a>
                     </li>
                     <li href="#">
                         <a>
                             <span>
-                            Yardım Merkezi
+                            Help Center
                             </span>
                         </a>
                     </li>
                     <li href="#">
                         <a>
                             <span>
-                            Hediye Kartları
+                            Gift Cards
                             </span>
                         </a>
                     </li>
                     <li href="#">
                         <a>
                             <span>
-                            Medya Merkezi
+                            Media Center
                             </span>
                         </a>
                     </li>
                     <li href="#">
                         <a>
                             <span>
-                            Yatırımcı İlişkileri
+                            Investor Relations
                             </span>
                         </a>
                     </li>
                     <li href="#">
                         <a>
                             <span>
-                            İş İmkanları
+                            Jobs
                             </span>
                         </a>
                     </li>
                     <li href="#">
                         <a>
                             <span>
-                            Çerez Tercihleri
+                            Cookie Preferences
                             </span>
                         </a>
                     </li>
                     <li href="#">
                         <a>
                             <span>
-                            Kurumsal Bilgiler
+                            Legal Notices
                             </span>
                         </a>
                     </li>
                     <li href="#">
                         <a>
                             <span>
-                            Gizlilik
+                            Privacy
                             </span>
                         </a>
                     </li>
                     <li href="#">
                         <a>
                             <span>
-                            Yasal Hükümler
+                            Corporate Information
                             </span>
                         </a>
                     </li>
                     <li href="#">
                         <a>
                             <span>
-                            Bize Ulaşın
+                            Contact Us
                             </span>
                         </a>
                     </li>
