@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Navigation from './navigation';
 import styles from './Header.module.scss'
-
+import Link from 'next/link';
 
 
 function Header() {
@@ -26,7 +26,9 @@ function Header() {
     return (
         <div id="header"className={styles.header}>
             <div className={styles.left}> 
+            <Link href="/homepage">
             <img className={styles.logo} src="https://raw.githubusercontent.com/eraygundogmus/netflix-clone/main/assets/logo.png"/>
+            </Link>
             <Navigation />
             </div>
             <div className={styles.right}>

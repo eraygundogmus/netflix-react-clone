@@ -11,8 +11,8 @@
   width: 100%;
   background: linear-gradient(
     to top,
-    rgba(255, 255, 255, 0) 20%,
-    rgba(20, 20, 20, 0.9) 85%
+    rgba(255, 255, 255, 0) 1%,
+    rgba(20, 20, 20, 0.7) 90%
   );
   color: white;
   .left {
@@ -20,6 +20,7 @@
     display: flex;
     .logo {
       max-width: 110px;
+      cursor: pointer;
     }
   }
   .right {
