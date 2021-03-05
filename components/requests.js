@@ -1,6 +1,7 @@
   
 const API_KEY = "4bce0e6dd9c6ea1738fa02f130b33d2b";
 
+const query = null
 const requests = {
   fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
   fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
@@ -18,7 +19,8 @@ const requests = {
   fetchTvDrama: `/discover/tv?api_key=${API_KEY}&with_genres=18`,
   fetchTvFamily: `/discover/tv?api_key=${API_KEY}&with_genres=10751`,
   fetchTvReality: `/discover/tv?api_key=${API_KEY}&with_genres=10764`,
-  fetchTvTalk: `/discover/tv?api_key=${API_KEY}&with_genres=10767`
+  fetchTvTalk: `/discover/tv?api_key=${API_KEY}&with_genres=10767`,
+  fetchSearch: `/search/multi?api_key=${API_KEY}&query=${query}`
 };
 
 export default requests;
