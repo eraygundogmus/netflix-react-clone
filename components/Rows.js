@@ -33,8 +33,10 @@ function Rows( {title, url, rowName} ) {
             <h2 className={styles.row_title}> {title} </h2>
                 <div className={styles.container}>
                         <div id="myRow" className={styles.row}> 
-                            {request.slice(0,20).map((card) => (
-                            <div className={styles.parent}> 
+                            {
+                            request.slice(0,20).map((card) => {
+                                return card.poster_path != null ?
+                            (<div className={styles.parent}> 
                                 <div id="card" key={card.id} className={styles.card}>
                                     <img className={styles.posters} src={`${img_url}${card.poster_path}`}/>
                                         <div className={styles.features} >
@@ -49,8 +51,10 @@ function Rows( {title, url, rowName} ) {
                                                 <p className={styles.overview}> {strShorter(card.overview, 120)} </p>
                                         </div>
                                 </div>
-                            </div>   
-                            ))}
+                            </div>) : null
+                            }
+
+                            )}
                         </div> 
 
                 </div>
