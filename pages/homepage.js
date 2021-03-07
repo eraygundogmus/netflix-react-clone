@@ -8,7 +8,7 @@ function homepage() {
     return (
         
         <div className="homepage-app">
-            <Header />
+            <Header url={requests.fetchSearch}/>
             <Bilboard type="S E R I E S"url={requests.fetchNetflixOriginals}/>
                 <div className="all_rows">
                 <Rows title="Netflix Originals" rowName="netflix_originals_row" url={requests.fetchNetflixOriginals} /> 

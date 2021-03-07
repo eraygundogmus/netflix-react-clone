@@ -1,7 +1,7 @@
   
 const API_KEY = "4bce0e6dd9c6ea1738fa02f130b33d2b";
+let query = null
 
-const query = null
 const requests = {
   fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
   fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
