@@ -11,7 +11,6 @@
   flex-direction: row;
   overflow-x: scroll;
   overflow-y: scroll;
-
   margin-left: 50px;
   overscroll-behavior: none;
   &::-webkit-scrollbar {
@@ -43,10 +42,9 @@
   }
   .features {
     background-color: black;
-
     max-width: 200px;
     height: 200px;
-    position: absolute;
+    display: none;
     z-index: 3;
     background-color: black;
   }

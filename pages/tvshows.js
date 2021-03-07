@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 function Movies() {
     return (
         <div className="homepage-app">
-            <Header url={requests.fetchSearch} />
+            <Header />
             <Bilboard type="S E R I E S"url={requests.fetchTVAction}/>
             <div className="all_rows">
             <Rows title="Comedy" rowName="tv_comedy_row" url={requests.fetchTvComedy}/>

@@ -9,26 +9,8 @@ import axios from '../components/base_url';
 
 function Header( {url} ) {
     const [search, setSearch] = useState(true);
-    const [query, setQuery] = useState('');
-    const [searchData, setSearchData] = useState([]);
 
-    const onChange = (e) => {
-        setQuery(e.target.value)
-    } 
 
-    useEffect(() => {
-        async function fetchSearchItems() {
-            const req = await axios.get(url);
-            const results = req.data.results
-            setSearchData(results)
-            console.log(results);
-            return req
-        }
-        setTimeout(() => {
-            fetchSearchItems();
-        }, 3000);
-
-    },[query])
     
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -75,7 +57,7 @@ function Header( {url} ) {
 
                     {search == true ? <img id='search_icon' className={styles.search} src="https://raw.githubusercontent.com/eraygundogmus/netflix-clone/885b5f0cc3726de2f215cabf40e86d51618a5c59/assets/search-icon.svg"/> : 
                     <div  className={styles.search_active}><img className={styles.search} src="https://raw.githubusercontent.com/eraygundogmus/netflix-clone/885b5f0cc3726de2f215cabf40e86d51618a5c59/assets/search-icon.svg"/>
-                    <input query={query} onChange={onChange} autoComplete="off" id="search_active" type='text' placeholder='Titles,people,genres'></input></div> }
+                    <input autoComplete="off" id="search_active" type='text' placeholder='Titles,people,genres'></input></div> }
 
                     <img className={styles.avatar} src="https://raw.githubusercontent.com/eraygundogmus/netflix-clone/main/assets/avatar.png"/>
             </div>
