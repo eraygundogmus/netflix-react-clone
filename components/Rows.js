@@ -11,12 +11,16 @@ import KeyboardArrowDownOutlinedIcon from '@material-ui/icons/KeyboardArrowDownO
 import styles from './Rows.module.scss'
 
 
+
+
 const img_url = "https://image.tmdb.org/t/p/w500/"
 const strShorter = function truncate(short, n){
     return short?.length > n ? short.substr(0, n-1) + "..." : short;}
 
 function Rows( {title, url, rowName} ) {
     const [request, setRequest] = useState([]);
+  
+
     useEffect(() => {
         async function fetchRowItems() {
             const req = await axios.get(url);
@@ -26,6 +30,9 @@ function Rows( {title, url, rowName} ) {
         fetchRowItems();
 //        console.log(request)
     },[url])
+    
+
+    
 
 
     return (
@@ -34,12 +41,13 @@ function Rows( {title, url, rowName} ) {
                 <div className={styles.container}>
                         <div id="myRow" className={styles.row}> 
                             {
-                            request.slice(0,20).map((card) => {
+                            request.slice(0,9).map((card) => {
                                 return card.poster_path != null ?
                             (<div className={styles.parent}> 
                                 <div id="card" key={card.id} className={styles.card}>
                                     <img className={styles.posters} src={`${img_url}${card.poster_path}`}/>
                                         <div className={styles.features} >
+
                                                 <div className={styles.buttons}>
                                                     <PlayCircleFilledOutlinedIcon fontSize="large"/>
                                                     <AddCircleOutlineOutlinedIcon fontSize="large" />

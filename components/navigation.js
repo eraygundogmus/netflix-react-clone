@@ -5,7 +5,7 @@ function Navigation() {
     return (
         <nav className={styles.header_navbar}>
             <Link href="/homepage">
-                <a className={styles.navbar_link}>Homepage</a>
+                <a className={styles.navbar_link}>Home</a>
             </Link>
             <Link href="/tvshows">
                 <a className={styles.navbar_link}>TV Shows</a>
